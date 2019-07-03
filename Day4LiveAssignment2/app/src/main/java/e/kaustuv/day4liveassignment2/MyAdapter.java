@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import io.realm.RealmResults;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
-    private RealmResults<Person> mPersonRealmResults;
+        private RealmResults<Person> mPersonRealmResults;
     private Context mContext;
 
     public MyAdapter(RealmResults<Person> persons, Context context){
