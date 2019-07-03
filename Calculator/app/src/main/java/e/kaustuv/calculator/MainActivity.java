@@ -28,9 +28,7 @@ public class MainActivity extends AppCompatActivity {
     public void onMinus(View view){
         opcode=2;
     }
-    public void onMultiply(View view){
-        opcode=3;
-    }
+    public void onMultiply(View view){ opcode=3; }
     public void onDivide(View view){
         opcode=4;
     }

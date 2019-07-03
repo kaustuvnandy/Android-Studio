@@ -11,11 +11,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="12dp"
         android:text="Image Button"
         android:textSize="25dp"
         app:layout_constraintBottom_toTopOf="@+id/imageButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
@@ -23,10 +24,11 @@
         android:layout_width="374dp"
         android:layout_height="147dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="8dp"
         android:src="@drawable/imgbutn"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -64,17 +66,14 @@
         android:layout_width="252dp"
         android:layout_height="70dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:text="Show/Hide Image"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.112" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -96,7 +95,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Disabled"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:onClick="onClickRadioButton"/>
 
         <RadioButton
             android:id="@+id/Enabled"
@@ -104,7 +104,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:text="Enabled"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:onClick="onClickRadioButton"/>
 
     </RadioGroup>
 
@@ -139,5 +140,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBox"
+        android:onClick="onClickRefresh"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
