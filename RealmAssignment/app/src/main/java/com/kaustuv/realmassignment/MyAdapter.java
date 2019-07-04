@@ -38,14 +38,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         holder.phone.setText(person.getPhone());
         holder.roll.setText(person.getRoll());
         holder.gender.setText(person.getGender());
-        if(position%4==0)
-            holder.relativeLayout.setBackgroundColor(Color.RED);note
-        if(position%4==1)
-            holder.relativeLayout.setBackgroundColor(Color.GREEN);
-        if(position%4==2)
-            holder.relativeLayout.setBackgroundColor(Color.YELLOW);
-        if(position%4==3)
+        if(person.getDept().equals("Information Technology"))
             holder.relativeLayout.setBackgroundColor(Color.BLUE);
+        if(person.getDept().equals("Computer Science Engineering"))
+            holder.relativeLayout.setBackgroundColor(Color.GREEN);
+        if(person.getDept().equals("Electronics Engineering"))
+            holder.relativeLayout.setBackgroundColor(Color.YELLOW);
+        if(person.getDept().equals("Electrical Engineering"))
+            holder.relativeLayout.setBackgroundColor(Color.RED);
 
     }
     @Override
