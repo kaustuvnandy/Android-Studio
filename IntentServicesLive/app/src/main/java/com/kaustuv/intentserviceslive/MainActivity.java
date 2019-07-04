@@ -21,6 +21,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onButtonPressed(View view){
         Intent intent = new Intent(this,MyIntentService.class);
+        //intent.putExtra("sleepTime",2000);
+        Bundle b=new Bundle();
+        b.putInt("sleepTime",2000);
+        intent.putExtra("bundle",b);
         startService(intent);
     }
     @Subscribe

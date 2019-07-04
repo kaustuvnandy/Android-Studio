@@ -2,6 +2,7 @@ package com.kaustuv.intentserviceslive;
 
 import android.app.IntentService;
 import android.content.Intent;
+import android.os.Bundle;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
@@ -25,8 +26,11 @@ public class MyIntentService extends IntentService {
     @Override
     protected void onHandleIntent(@Nullable Intent intent){
         Log.i(TAG,"MyIntentService: onHandleIntent called on "+ Thread.currentThread().getName());
+        //int st=intent.getIntExtra("sleepTime",0);
+        Bundle bb=intent.getBundleExtra("bundle");
+        int st=bb.getInt("sleepTime");
         try{
-            Thread.sleep(2000);
+            Thread.sleep(st);
         }
         catch (InterruptedException e){
             e.printStackTrace();
