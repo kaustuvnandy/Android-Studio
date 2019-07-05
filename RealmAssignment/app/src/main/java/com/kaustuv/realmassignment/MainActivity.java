@@ -56,6 +56,11 @@ public class MainActivity extends AppCompatActivity {
                 person.setGender("Male");
             realm.commitTransaction();
             Toast.makeText(mcontext,"Success",Toast.LENGTH_LONG).show();
+            name.setText("");
+            roll.setText("");
+            phone.setText("");
+            female.setChecked(true);
+
         }
         catch(Exception ex)
         {

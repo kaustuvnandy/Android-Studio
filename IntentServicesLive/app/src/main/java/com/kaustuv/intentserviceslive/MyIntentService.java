@@ -29,6 +29,10 @@ public class MyIntentService extends IntentService {
         //int st=intent.getIntExtra("sleepTime",0);
         Bundle bb=intent.getBundleExtra("bundle");
         int st=bb.getInt("sleepTime");
+        Bundle s=new Bundle();                  //Here problem
+        s.putString("name","Kaustuv Nandy");
+        EventBus.getDefault().post(new Pojo("Amitava"));
+        intent.putExtra("example",s);
         try{
             Thread.sleep(st);
         }
@@ -41,7 +45,7 @@ public class MyIntentService extends IntentService {
     public void onDestroy(){
         super.onDestroy();
         Log.i(TAG,"MyIntentService: onDestroy called on "+ Thread.currentThread().getName());
-        EventBus.getDefault().post(new Pojo());
+
     }
 }
 

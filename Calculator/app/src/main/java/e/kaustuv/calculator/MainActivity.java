@@ -11,31 +11,48 @@ public class MainActivity extends AppCompatActivity {
     Button butn;
     double res=0.0,a,b;
     TextView s;
-    int opcode;
+    int opcode=4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        txt1 = findViewById(R.id.number1);
+        txt2 = findViewById(R.id.number2);
+        s = findViewById(R.id.result);
+        butn = findViewById(R.id.mode);
+    }
 
+    public void onMode(View view){
+        String k="Mode\n\n";
+        String l="";
+        if(opcode==1)
+        {
+            opcode=2;
+            l="Subtraction";
+            butn.setText(k+l);
+        }
+        else if(opcode==2){
+            opcode=3;
+            l="Multiplication";
+            butn.setText(k+l);
+        }
+        else if(opcode==3){
+            opcode=4;
+            l="Division";
+            butn.setText(k+l);
+        }
+        else if(opcode==4){
+            opcode=1;
+            l="Addition";
+            butn.setText(k+l);
+        }
 
 
     }
 
-    public void onPlus(View view){
-        opcode=1;
-    }
-    public void onMinus(View view){
-        opcode=2;
-    }
-    public void onMultiply(View view){ opcode=3; }
-    public void onDivide(View view){
-        opcode=4;
-    }
     public void onCalculate(View view){
-        txt1=findViewById(R.id.number1);
-        txt2=findViewById(R.id.number2);
-        s=findViewById(R.id.result);
+
         a=Integer.parseInt(txt1.getText().toString());
         b=Integer.parseInt(txt2.getText().toString());
 

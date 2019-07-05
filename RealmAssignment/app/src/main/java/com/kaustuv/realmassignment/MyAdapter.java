@@ -17,12 +17,12 @@ import io.realm.RealmResults;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     private RealmResults<Person> mPersonRealmResults;
-    private Context mconext;
+    private Context mcontext;
 
     public MyAdapter(RealmResults<Person> person, Context context)
     {
         mPersonRealmResults=person;
-        mconext=context;
+        mcontext=context;
     }
     @NonNull
     @Override

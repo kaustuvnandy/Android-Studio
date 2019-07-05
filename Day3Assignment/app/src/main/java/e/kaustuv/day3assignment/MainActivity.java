@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Switch;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup radiogroup;
     RadioButton disabled,enabled,t;
     ImageView imageview;
+    TextView tv1,tv2;
     CheckBox chkbx;
     ImageButton imagebutton;
     Button refresh;
@@ -46,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
 
         chkbx=findViewById(R.id.checkBox);
         imagebutton=findViewById(R.id.imageButton);
+        tv1=findViewById(R.id.tv1);
+        tv2=findViewById(R.id.tv2);
         chkbx.setChecked(true);
 
         chkbx.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -67,11 +71,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickRadioButton(View v) {
         int radioId=radiogroup.getCheckedRadioButtonId();
-            t=findViewById(radioId);
-            if(t.getText().toString().equals("Enabled"))
-                imagebutton.setClickable(true);
-            else
-                imagebutton.setClickable(false);
+        t=findViewById(radioId);
+        if(t.getText().toString().equals("Enabled"))
+            imagebutton.setClickable(true);
+        else
+            imagebutton.setClickable(false);
     }
 
     public void onClickRefresh(View v)
@@ -79,5 +83,13 @@ public class MainActivity extends AppCompatActivity {
         switch1.setChecked(true);
         enabled.setChecked(true);
         chkbx.setChecked(true);
+        tv1.setText("");
+        tv2.setText("");
+    }
+    public void onClickImgButton(View view){
+        tv1.setText("IMAGE BUTTON");
+    }
+    public void onClickImgView(View View){
+        tv2.setText("IMAGE VIEW");
     }
 }
