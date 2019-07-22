@@ -62,8 +62,14 @@ public class MainActivity extends AppCompatActivity {
             res=a-b;
         else if(opcode==3)
             res=a*b;
+        else {
+        if(b==0)
+        {
+            Toast.makeText(this,"Error,Division by 0",Toast.LENGTH_LONG).show();
+        }
         else
             res=a/b;
+        }
         String z="";
         z=z+res;
         s.setText(z);
